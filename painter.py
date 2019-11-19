@@ -34,3 +34,13 @@ class Painter:
 
         if self.k < n:
             return self.generate_n_frames(n, new_frame)
+
+    def generate_n_unsexy_frames(self,
+            n,
+            start_frame=np.ones((100,100,3))
+            ):
+
+        for k in range(0, n):
+            new_frame = self._random_generated_pixel(start_frame)
+            self.frames.append(new_frame.copy())
+        return
